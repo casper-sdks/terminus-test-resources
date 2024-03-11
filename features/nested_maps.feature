@@ -9,7 +9,7 @@ Feature: Nested CL Map Values
     When the map is read from the deploy
     And the map's bytes are "01000000030000004f4e4502000000"
     Then the map's key type is "String" and the maps value type is "U32"
-    #And the map's key is "ONE" and value is "2"
+    And the map's key is "ONE" and value is "2"
 
     Given a nested map is created {"ONE": {"TWO": 3}, "FOUR": {"FIVE", 6}}
     Then the map's key type is "String" and the maps value type is "Map"
