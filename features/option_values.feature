@@ -3,7 +3,7 @@ Feature: Option Values
   Scenario: Option Values
     Given that an Option value has an empty value
     Then the Option value is not present
-    And the Option value's bytes are ""
+    And the Option value's bytes are "00"
 
     Given an Option value contains a "Bool" value of "true"
     Then the Option value's bytes are "0101"
