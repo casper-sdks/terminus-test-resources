@@ -9,7 +9,7 @@ Feature: read_deploy
     And the ttl is 30m
     And the gas price is 2
     And the body_hash is "eaf11e3193f460abaed621762442cce19ca53ac42c11e6a0550263a8e4d34273"
-    And the chain name is  "mainnet"
+    And the chain name is "mainnet"
     And dependency 0 is "0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f"
     And dependency 1 is "1010101010101010101010101010101010101010101010101010101010101010"
     And the payment amount is 1000000000
