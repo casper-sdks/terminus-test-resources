@@ -20,15 +20,15 @@ Feature: wasm operations
     When the wasm is loaded as from the file system
     And the wasm has been successfully deployed
     Then the account named keys contain the "counter" name and a version uref
-    And the version uref's dictionary item value is 1
+    And the version dictionary item value is 1
     And the the contract is invoked by name "counter_package_name", and version 1, and entry point of "counter_inc", and with a payment amount of "1000000000"
     Then the contract invocation deploy is successful
 
   Scenario: StoredVersionedContractByHash
-    Given that a smart contract "counter-v1.wasm" is located in the "contracts" folder
+    Given that a smart contract "counter-v2.wasm" is located in the "contracts" folder
     When the wasm is loaded as from the file system
     And the wasm has been successfully deployed
     Then the account named keys contain the "counter" name and a version uref
-#    And the version uref's dictionary item value is 2
-    And the the contract is invoked by hash, and version 1, and entry point of "counter_inc", and with a payment amount of "1000000000"
+    And the version dictionary item value is 2
+    And the the contract is invoked by hash, and version 2, and entry point of "counter_inc", and with a payment amount of "1000000000"
     Then the contract invocation deploy is successful
