@@ -29,14 +29,9 @@ Feature: Blocks Integration Tests
     Given that an invalid block height is requested via the sdk
     Then a valid error message is returned
 
-    Given that chain transfer data is initialised
-    When the deploy data is put on chain
-    Then the deploy response contains a valid deploy hash
-    Then request the block transfer
-    Then request the block transfer from the test node
-    And the returned block contains the transfer hash returned from the test node block
-
-
-
+    Given that 10 node transfers are initiated
+    Then a list of 10 transaction hashes are generated
+    Then each transaction has a transacted block
+    And the transactions of the SDK block equal the transactions on the node block
 
 
