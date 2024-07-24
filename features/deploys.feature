@@ -6,11 +6,11 @@ Feature: Deploys
     And the transfer gas price is 1
     And the deploy is given a ttl of 30m
     When the deploy is put on chain "casper-net-1"
-    Then the deploy response contains a valid deploy hash of length 64 and an API version "1.0.0"
+    Then the deploy response contains a valid deploy hash of length 64 and an API version "2.0.0"
     Then wait for a block added event with a timeout of 300 seconds
     Given that a Transfer has been successfully deployed
     When a deploy is requested via the info_get_deploy RCP method
-    Then the deploy data has an API version of "1.0.0"
+    Then the deploy data has an API version of "2.0.0"
     And the deploy execution result has "lastBlockAdded" block hash
     And the deploy execution has a cost of 100000000 motes
     And the deploy has a payment amount of 100000000
